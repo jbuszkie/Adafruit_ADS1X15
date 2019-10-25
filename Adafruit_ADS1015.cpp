@@ -115,6 +115,14 @@ void Adafruit_ADS1015::begin() {
   Wire.begin();
 }
 
+uint32_t Adafruit_ADS1015::getClock() {
+  return Wire.getClock();
+}
+
+void Adafruit_ADS1015::setClock(uint32_t frequency) {
+  Wire.setClock(frequency);
+}
+
 /**************************************************************************/
 /*!
     @brief  Sets the gain and input voltage range
